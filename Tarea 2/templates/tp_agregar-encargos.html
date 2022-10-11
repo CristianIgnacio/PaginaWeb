@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{0}</title>
+
+    <!-- CSS bootstrap -->
+    <link rel="stylesheet" href="../css/estilo2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- JS bootstrap --> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link href="../css/favicon2.ico" rel="icon" type="image/x-icon">
+</head>
+<body class="bg-light">
+    <div class="py-4 text-center"></div>
+    <div class="container">
+    <div class="row align-items-center">
+        <div Class="col-md-7 col-lg-12">
+        <h4 class="mb-4">Agrega tu encargo</h4>
+        <!-- <form action="../cgi-bin/save_order2.py" id="form-agregar-encargo" onsubmit="return validacion2()" class="needs-validation"  enctype="multipart/form-data"> -->
+        <form action="../cgi-bin/save_order2.py" method="post" id="form-agregar-encargo" class="needs-validation" enctype="multipart/form-data">
+            <div class="row g-3">
+                <div class="col-sm-6" >
+                    <label for="descripcion-encargo" class="form-label">Descripción encargo:</label>
+                    <input type="text" size="100" name="descripcion-encargo" id="descripcion-encargo" class="form-control">
+                </div>
+                
+                <div class="col-sm-6" >
+                    <label class="form-label">Espacio:</label>
+                    <select name="espacio-solicitado" id="espacio-solicitado" class="form-control">
+                        <option selected value="">Elija una opcion ...</option>
+                        <option value="10x10x10">10x10x10</option>
+                        <option value="20x20x20">20x20x20</option>
+                        <option value="30x30x30">30x30x30</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-6" >
+                    <label class="form-label">Kilos:</label>
+                    <select name="kilos-solicitado" id="kilos-solicitado" class="form-control">
+                        <option selected value="">Elija una opcion ...</option>
+                        <option value="200 gr">200 gr</option>
+                        <option value="500 gr">500 gr</option>
+                        <option value="800 gr">800 gr</option>
+                        <option value="1 kg">1 kg</option>
+                        <option value="1.5 kg">1.5 kg</option>
+                        <option value="2 kg">2 kg</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Pais origen:</label>
+                    <select name="pais-origen" id="pais-origen" class="form-control">
+                        <option selected value="">Elija una opcion ...</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Ciudad origen:</label>
+                    <select name="ciudad-origen" id="ciudad-origen" class="form-control">
+                        <option selected value="">Elija una opcion ...</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Pais destino:</label>
+                    <select name="pais-destino" id="pais-destino" class="form-control">
+                        <option selected value="">Elija una opcion ...</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Ciudad destino:</label>
+                    <select name="ciudad-destino" id="ciudad-destino" class="form-control">
+                        <option selected value="">Elija una opcion ...</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Foto encargo:</label>
+                    <input type="file"  name="foto-encargo" id="foto-encargo" multiple class="form-control">
+                </div>
+                
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Email encargo:</label>
+                    <input type="text" size="30"  name="email" id="email" placeholder="example@gmail.com" class="form-control">
+                </div>
+                
+                <div class="col-sm-6">
+                    <label class="form-label">Numero celular encargo (Opcional):</label>
+                    <input type="text" size="15"  name="celular" id="celular" placeholder="ej: +56912345678" class="form-control">
+                </div>
+                <div class="col-sm-6">
+                    {1}
+                </div>
+
+                <div class="col-sm-6">
+                    {2}
+                </div>
+            </div>
+
+            <hr class="my-4">
+            <button type="submit" class="w-100 btn btn-primary btn-lg" >Grabar Encargo</button>
+        </form>
+        </div>
+    </div>
+    </div>
+    <div class="py-4 text-center"></div>    
+    <script src="../js/validacion.js"></script>
+</body>
+</html>

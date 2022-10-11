@@ -1,0 +1,16 @@
+body {
+    background-image: url("background2.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.hola{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+}
+
+ul{
+    justify-content: center;
+}

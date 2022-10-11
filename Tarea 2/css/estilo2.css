@@ -1,0 +1,23 @@
+.col-sm-6{
+  margin-top: 1rem;
+}
+
+body {
+  background-image: url("background2.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: auto auto;
+}
+
+tr{
+  text-align: center;
+}
+
+p{
+  color:aliceblue;
+}
+
+nav{
+  opacity: 0.9 ;
+
+}

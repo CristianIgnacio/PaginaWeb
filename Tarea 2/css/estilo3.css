@@ -1,0 +1,21 @@
+div.bloques{
+    display: inline-table;
+    vertical-align: middle;
+    height: 480px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgb(232, 240, 241);
+    opacity: 0.9;
+}
+
+h2{
+    text-align: left;
+}
+
+body{
+    background-image: url("background2.jpg");
+    background-position: 100% 65%;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
